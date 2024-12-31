@@ -4,7 +4,7 @@
 // isStrictlyDescending([5, 4, 6, 1]) => false
 // isStrictlyDescending([5, 4, 4, 1]) => false
 
-function isStrictlyDescending(numbers) {
+export function isStrictlyDescending(numbers) {
   for (let index = 0; index < numbers.length - 1; index++) {
     if (numbers[index] <= numbers[index + 1]) {
       return false;
@@ -29,7 +29,7 @@ function makeMessage(numbers, actual, expected) {
 }
 
 function getCheckMark(actual, expected) {
-  return actual === expected ? '✅' : '❌';
+  return actual === expected ? "✅" : "❌";
 }
 
 function testStrictlyDescending(numbers, expected) {
@@ -45,4 +45,4 @@ function testingFunction() {
   testStrictlyDescending([4, 3, 3, 1], false);
 }
 
-testingFunction();
+// testingFunction();

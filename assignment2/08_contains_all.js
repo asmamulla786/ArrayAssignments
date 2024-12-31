@@ -38,7 +38,7 @@ function makeMessage(array, elements, actual, expected) {
 }
 
 function getCheckMark(actual, expected) {
-  return actual === expected ? '✅' : '❌';
+  return actual === expected ? "✅" : "❌";
 }
 
 function testContainAll(array, elements, expected) {
@@ -55,4 +55,4 @@ function testingFunction() {
   testContainAll([], [], true);
 }
 
-testingFunction();
+// testingFunction();
