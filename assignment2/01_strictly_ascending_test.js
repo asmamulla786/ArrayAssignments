@@ -1,18 +1,18 @@
-import { assertEquals } from "jsr:@std/assert";
+import { assertFalse, assert } from "jsr:@std/assert";
 import { isStrictlyAscending } from "./01_strictly_ascending.js";
 
-Deno.test("strictly ascending array is in strictly ascending order", () => {
-  assertEquals(isStrictlyAscending([1, 3, 4, 5, 16]), true);
+Deno.test("should be true when array in ascending order", () => {
+  assert(isStrictlyAscending([1, 3, 4, 5, 16]));
 });
 
-Deno.test("strictly ascending of empty array", () => {
-  assertEquals(isStrictlyAscending([]), true);
+Deno.test("should be true when array is empty", () => {
+  assert(isStrictlyAscending([]));
 });
 
-Deno.test("strictly ascending array is not in strictly ascending order", () => {
-  assertEquals(isStrictlyAscending([1, 3, 4, 5, 2]), false);
+Deno.test("should be false when array not in ascending order", () => {
+  assertFalse(isStrictlyAscending([1, 3, 4, 5, 2]));
 });
 
-Deno.test("strictly ascending of array which contains same elements", () => {
-  assertEquals(isStrictlyAscending([1, 3, 3, 4]), false);
+Deno.test("should be false when array contains same elements", () => {
+  assertFalse(isStrictlyAscending([1, 3, 3, 4]));
 });
